@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'academic-front'`, () => {
+  it(`should have as title 'mindtechpy-front-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('academic-front');
+    expect(app.title).toEqual('mindtechpy-front-angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('academic-front app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('mindtechpy-front-angular app is running!');
   });
 });

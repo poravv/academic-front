@@ -1,0 +1,126 @@
+<app-content-header [title]="'Nuevo Tema'"></app-content-header>
+
+<form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Header color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="header_color" nz-input placeholder="Header color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Header color 2</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="header_color2" nz-input placeholder="Header color 2" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Header Title color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="header_title_color" nz-input placeholder="Header Title color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Cont background Color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="content_background_color" nz-input placeholder="Cont background Color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Footer background color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="footer_background_color1" nz-input placeholder="Footer background color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Footer background color 2</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="footer_background_color2" nz-input placeholder="Footer background color 2" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Footer title color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="footer_title_color" nz-input placeholder="Footer title color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Footer icon color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="footer_icon_color" nz-input placeholder="Footer icon color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>State</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="state" nz-input placeholder="Estado" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Cont title color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="content_title_color" nz-input placeholder="Cont title color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Cont subtitle color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="content_subtitle_color" nz-input placeholder="Cont subtitle color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Cont description color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="content_description_color" nz-input placeholder="Cont description color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Cont button color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="content_button_color" nz-input placeholder="Cont button color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-item>
+        <nz-form-label nz-label nzRequired>Button text color</nz-form-label>
+        <nz-form-control nzErrorTip="Inserte un valor correcto!">
+            <nz-input-group >
+                <input formControlName="button_text_color" nz-input placeholder="Button text color" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    
+
+    <nz-form-item nz-item>
+        <nz-form-control>
+            <button nz-button nzType="primary" [disabled]="!validateForm.valid">Submit</button>
+        </nz-form-control>
+        <nz-form-control>
+            <button nz-button (click)="resetForm($event)">Reset</button>
+        </nz-form-control>
+    </nz-form-item>
+</form>

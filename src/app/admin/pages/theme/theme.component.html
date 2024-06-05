@@ -1,0 +1,89 @@
+<app-content-header [title]="'Theme'" [route]="'/theme/create'" [buttonTitle]="'Nuevo'"></app-content-header>
+<div style="padding: 10px;">
+  <nz-table #editRowTable nzBordered [nzData]="listOfDisplayData" nzTableLayout="fixed" nzSize="middle"
+    [nzScroll]="{ x: '2000px', y: '600px'}"
+    >
+    <thead>
+      <tr>
+        <!--th nzWidth="30%">COLOR1</th-->
+        <th nzWidth="2%">Id</th>
+        <th>HeadC1</th>
+        <th>HeadC2</th>
+        <th>HeadTitleC</th>
+        <th>ContBackCol</th>
+        <th>FootC1</th>
+        <th>FootC2</th>
+        <th>FootTitleC</th>
+        <th>FootIconC</th>
+        <th nzCustomFilter>
+          State
+          <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+            <span nz-icon nzType="search"></span>
+          </nz-filter-trigger>
+        </th>
+        <th>ContTitleC</th>
+        <th>ContSubTC</th>
+        <th>ContDC</th>
+        <th>ContBC</th>
+        <th>ButtTxtC</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of editRowTable.data">
+        <ng-container *ngIf="!editCache[data.idtheme].edit; else editTemplate">
+          <td>{{ data.idtheme }}</td>
+          <td>{{ data.header_color }}</td>
+          <td>{{ data.header_color2 }}</td>
+          <td>{{ data.header_title_color }}</td>
+          <td>{{ data.content_background_color }}</td>
+          <td>{{ data.footer_background_color1 }}</td>
+          <td>{{ data.footer_background_color2 }}</td>
+          <td>{{ data.footer_title_color }}</td>
+          <td>{{ data.footer_icon_color }}</td>
+          <td>{{ data.state }}</td>
+          <td>{{ data.content_title_color }}</td>
+          <td>{{ data.content_subtitle_color }}</td>
+          <td>{{ data.content_description_color }}</td>
+          <td>{{ data.content_button_color }}</td>
+          <td>{{ data.button_text_color }}</td>
+          <td>
+            <a style="padding: 4px;" (click)="startEdit(data.idtheme)">Edit</a>
+            <a style="padding: 4px;" nz-popconfirm nzPopconfirmTitle="Seguro que desea eliminar?" (nzOnConfirm)="deleteRow(data.idtheme)">Delete</a>
+          </td>
+        </ng-container>
+        <ng-template #editTemplate>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.idtheme" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.header_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.header_color2" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.header_title_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.content_background_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.footer_background_color1" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.footer_background_color2" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.footer_title_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.footer_icon_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.state" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.content_title_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.content_subtitle_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.content_description_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.content_button_color" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtheme].data.button_text_color" /></td>
+          <td>
+            <a (click)="saveEdit(data.idtheme)" class="save">Save</a>
+            <a nz-popconfirm nzPopconfirmTitle="Sure to cancel?"
+              (nzOnConfirm)="cancelEdit(data.idtheme)">Cancel</a>
+          </td>
+        </ng-template>
+      </tr>
+    </tbody>
+  </nz-table>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <div class="ant-table-filter-dropdown">
+      <div class="search-box">
+        <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+        <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+        <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </nz-dropdown-menu>
+</div>
