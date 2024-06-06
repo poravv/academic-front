@@ -9,6 +9,8 @@ import { CursoComponent } from './admin/pages/referenciales/curso/curso.componen
 import { CursoCreateComponent } from './admin/pages/referenciales/curso/curso-create/curso-create.component';
 import { TurnoComponent } from './admin/pages/referenciales/turno/turno.component';
 import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
+import { DocumentosComponent } from './admin/pages/referenciales/documentos/documentos.component';
+import { DocumentosCreateComponent } from './admin/pages/referenciales/documentos/documentos-create/documentos-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -33,6 +35,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: TurnoComponent },
       { path: 'create', component: TurnoCreateComponent }
+    ]
+  },
+  {
+    path: 'documentos',
+    children: [
+      { path: 'list', component: DocumentosComponent },
+      { path: 'create', component: DocumentosCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

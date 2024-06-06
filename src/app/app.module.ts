@@ -26,6 +26,8 @@ import { CreateMasivoComponent } from './admin/pages/create-masivo/create-masivo
 import { DeleteMasivoComponent } from './admin/pages/delete-masivo/delete-masivo.component';
 import { CursoComponent } from './admin/pages/referenciales/curso/curso.component';
 import { CursoCreateComponent } from './admin/pages/referenciales/curso/curso-create/curso-create.component';
+import { DocumentosComponent } from './admin/pages/referenciales/documentos/documentos.component';
+import { DocumentosCreateComponent } from './admin/pages/referenciales/documentos/documentos-create/documentos-create.component';
 import { TurnoComponent } from './admin/pages/referenciales/turno/turno.component';
 import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
 
@@ -68,7 +70,9 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     CreateMasivoComponent,
     DeleteMasivoComponent,
     TurnoComponent,
-    TurnoCreateComponent
+    TurnoCreateComponent,
+    DocumentosComponent,
+    DocumentosCreateComponent
   ],
   imports: [
     BrowserModule,
