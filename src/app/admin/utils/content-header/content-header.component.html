@@ -10,8 +10,8 @@
           </a>
           <nz-dropdown-menu #menu="nzDropdownMenu">
             <ul nz-menu nzSelectable>
-              <li nz-menu-item [routerLink]="'/create-masivo/ciudad'">Creación masiva</li>
-              <li nz-menu-item [routerLink]="'/delete-masivo/ciudad'">Eliminación masiva</li>
+              <li nz-menu-item [routerLink]="['/create-masivo/',type]">Creación masiva</li>
+              <li nz-menu-item [routerLink]="['/delete-masivo/',type]">Eliminación masiva</li>
             </ul>
           </nz-dropdown-menu>
     </div>

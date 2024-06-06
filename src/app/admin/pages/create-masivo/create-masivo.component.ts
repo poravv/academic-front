@@ -29,12 +29,14 @@ export class CreateMasivoComponent implements OnInit {
       this.type = params['type'];
       this.verificaEntidad(this.type);
     });
-
   }
 
   verificaEntidad(type: string) {
-    //console.log(this.archivoJson);
+    console.log(type);
+    
     if (type === 'ciudad') this.estructura = myJson[type][0];
+    if (type === 'curso') this.estructura = myJson[type][0];
+    else this.volver();
   }
 
   handleFileInput(event: any) {

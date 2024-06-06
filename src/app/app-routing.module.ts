@@ -5,6 +5,8 @@ import { CiudadComponent } from './admin/pages/referenciales/ciudad/ciudad.compo
 import { CiudadCreateComponent } from './admin/pages/referenciales/ciudad/ciudad-create/ciudad-create.component';
 import { CreateMasivoComponent } from './admin/pages/create-masivo/create-masivo.component';
 import { DeleteMasivoComponent } from './admin/pages/delete-masivo/delete-masivo.component';
+import { CursoComponent } from './admin/pages/referenciales/curso/curso.component';
+import { CursoCreateComponent } from './admin/pages/referenciales/curso/curso-create/curso-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -15,6 +17,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: CiudadComponent },
       { path: 'create', component: CiudadCreateComponent }
+    ]
+  },
+  {
+    path: 'curso',
+    children: [
+      { path: 'list', component: CursoComponent },
+      { path: 'create', component: CursoCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

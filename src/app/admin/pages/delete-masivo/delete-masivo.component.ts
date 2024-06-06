@@ -9,11 +9,11 @@ import { DeleteMasivoService } from '../../services/masivo/delete-masivo.service
   templateUrl: './delete-masivo.component.html',
   styleUrls: ['./delete-masivo.component.scss']
 })
+
 export class DeleteMasivoComponent implements OnInit {
   registros: any[] = []; // Arreglo para almacenar los registros del archivo CSV
   progreso = 0; // Inicializa el progreso en 0
   estructura !: any;
-  archivoJson !: any;
   totalRegistros!:number;
   coleccion:any[]=[];
   entidad!:any;
@@ -24,17 +24,17 @@ export class DeleteMasivoComponent implements OnInit {
   constructor(private route: ActivatedRoute,private deleteMasivoService:DeleteMasivoService,private messageService:MessageService) { }
 
   ngOnInit(): void {
-    this.archivoJson = myJson;
     this.route.params.subscribe(params => {
       this.type = params['type'];
       this.verificaEntidad(this.type);
     });
-
   }
 
   verificaEntidad(type: string) {
     //console.log(this.archivoJson);
     if (type === 'ciudad') this.estructura = myJson[type][1];
+    if (type === 'curso') this.estructura = myJson[type][1];
+    else this.volver();
   }
 
   handleFileInput(event: any) {
