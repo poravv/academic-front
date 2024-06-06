@@ -1,4 +1,5 @@
     {
         "ciudad" : [["descripcion","estado"],["idciudad"]],
-        "curso" : [["descripcion","estado"],["idcurso"]]
+        "curso" : [["descripcion","estado"],["idcurso"]],
+        "turno" : [["descripcion","estado"],["idturno"]]
     }

@@ -17,7 +17,6 @@ import { AuthConfig, OAuthService, provideOAuthClient } from 'angular-oauth2-oid
 import { environment } from './environment/environments';
 import { TitleButtonComponent } from './admin/utils/title-button/title-button.component';
 import { ContentHeaderComponent } from './admin/utils/content-header/content-header.component';
-import { TurnoComponent } from './admin/pages/referenciales/turno/turno.component';
 import { PersonaComponent } from './admin/pages/referenciales/persona/persona.component';
 import { homeComponent } from './admin/pages/home/home.component';
 import { CiudadCreateComponent } from './admin/pages/referenciales/ciudad/ciudad-create/ciudad-create.component';
@@ -27,6 +26,8 @@ import { CreateMasivoComponent } from './admin/pages/create-masivo/create-masivo
 import { DeleteMasivoComponent } from './admin/pages/delete-masivo/delete-masivo.component';
 import { CursoComponent } from './admin/pages/referenciales/curso/curso.component';
 import { CursoCreateComponent } from './admin/pages/referenciales/curso/curso-create/curso-create.component';
+import { TurnoComponent } from './admin/pages/referenciales/turno/turno.component';
+import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
 
 registerLocaleData(en);
 
@@ -61,12 +62,13 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     CiudadCreateComponent,
     TitleButtonComponent,
     ContentHeaderComponent,
-    TurnoComponent,
     CursoComponent,
     CursoCreateComponent,
     PersonaComponent,
     CreateMasivoComponent,
-    DeleteMasivoComponent
+    DeleteMasivoComponent,
+    TurnoComponent,
+    TurnoCreateComponent
   ],
   imports: [
     BrowserModule,

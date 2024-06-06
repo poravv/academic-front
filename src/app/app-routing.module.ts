@@ -7,6 +7,8 @@ import { CreateMasivoComponent } from './admin/pages/create-masivo/create-masivo
 import { DeleteMasivoComponent } from './admin/pages/delete-masivo/delete-masivo.component';
 import { CursoComponent } from './admin/pages/referenciales/curso/curso.component';
 import { CursoCreateComponent } from './admin/pages/referenciales/curso/curso-create/curso-create.component';
+import { TurnoComponent } from './admin/pages/referenciales/turno/turno.component';
+import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -24,6 +26,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: CursoComponent },
       { path: 'create', component: CursoCreateComponent }
+    ]
+  },
+  {
+    path: 'turno',
+    children: [
+      { path: 'list', component: TurnoComponent },
+      { path: 'create', component: TurnoCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },
