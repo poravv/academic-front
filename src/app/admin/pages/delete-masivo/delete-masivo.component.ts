@@ -39,6 +39,7 @@ export class DeleteMasivoComponent implements OnInit {
     else if (type === 'tipo_evaluacion') this.estructura = myJson[type][1];
     else if (type === 'anho_lectivo') this.estructura = myJson[type][1];
     else if (type === 'aptitud_militar') this.estructura = myJson[type][1];
+    else if (type === 'materia') this.estructura = myJson[type][1];
     else this.volver();
   }
 

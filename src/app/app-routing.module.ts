@@ -17,6 +17,8 @@ import { AnhoLectivoComponent } from './admin/pages/referenciales/anho_lectivo/a
 import { AnhoLectivoCreateComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo-create/anho_lectivo-create.component';
 import { AptitudMilitarComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar.component';
 import { AptitudMilitarCreateComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar-create/aptitud_militar-create.component';
+import { MateriaComponent } from './admin/pages/referenciales/materia/materia.component';
+import { MateriaCreateComponent } from './admin/pages/referenciales/materia/materia-create/materia-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -62,6 +64,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: AptitudMilitarComponent },
       { path: 'create', component: AptitudMilitarCreateComponent }
+    ]
+  },
+  {
+    path: 'materia',
+    children: [
+      { path: 'list', component: MateriaComponent },
+      { path: 'create', component: MateriaCreateComponent }
     ]
   },
   {

@@ -40,6 +40,7 @@ export class CreateMasivoComponent implements OnInit {
     else if (type === 'tipo_evaluacion') this.estructura = myJson[type][0];
     else if (type === 'anho_lectivo') this.estructura = myJson[type][0];
     else if (type === 'aptitud_militar') this.estructura = myJson[type][0];
+    else if (type === 'materia') this.estructura = myJson[type][0];
     else this.volver();
   }
 
