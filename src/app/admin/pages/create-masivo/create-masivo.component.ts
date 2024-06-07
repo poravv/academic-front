@@ -32,10 +32,14 @@ export class CreateMasivoComponent implements OnInit {
   }
 
   verificaEntidad(type: string) {
-    console.log(type);
     
     if (type === 'ciudad') this.estructura = myJson[type][0];
-    if (type === 'curso') this.estructura = myJson[type][0];
+    else if (type === 'curso') this.estructura = myJson[type][0];
+    else if (type === 'turno') this.estructura = myJson[type][0];
+    else if (type === 'documentos') this.estructura = myJson[type][0];
+    else if (type === 'tipo_evaluacion') this.estructura = myJson[type][0];
+    else if (type === 'anho_lectivo') this.estructura = myJson[type][0];
+    else if (type === 'aptitud_militar') this.estructura = myJson[type][0];
     else this.volver();
   }
 

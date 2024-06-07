@@ -4,5 +4,6 @@
         "turno" : [["descripcion","estado"],["idturno"]],
         "documentos" : [["descripcion","estado"],["iddocumentos"]],
         "tipo_evaluacion" : [["descripcion","estado"],["idtipo_evaluacion"]],
-        "anho_lectivo" : [["anho","estado"],["idanho_lectivo"]]
+        "anho_lectivo" : [["anho","estado"],["idanho_lectivo"]],
+        "aptitud_militar" : [["descripcion","punto","estado"],["idaptitud_militar"]]
     }

@@ -15,6 +15,8 @@ import { TipoEvaluacionComponent } from './admin/pages/referenciales/tipo_evalua
 import { TipoEvaluacionCreateComponent } from './admin/pages/referenciales/tipo_evaluacion/turno-create/tipo_evaluacion-create.component';
 import { AnhoLectivoComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo.component';
 import { AnhoLectivoCreateComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo-create/anho_lectivo-create.component';
+import { AptitudMilitarComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar.component';
+import { AptitudMilitarCreateComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar-create/aptitud_militar-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -53,6 +55,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: TipoEvaluacionComponent },
       { path: 'create', component: TipoEvaluacionCreateComponent }
+    ]
+  },
+  {
+    path: 'aptitud_militar',
+    children: [
+      { path: 'list', component: AptitudMilitarComponent },
+      { path: 'create', component: AptitudMilitarCreateComponent }
     ]
   },
   {

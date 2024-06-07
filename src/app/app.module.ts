@@ -34,6 +34,8 @@ import { TipoEvaluacionComponent } from './admin/pages/referenciales/tipo_evalua
 import { TipoEvaluacionCreateComponent } from './admin/pages/referenciales/tipo_evaluacion/turno-create/tipo_evaluacion-create.component';
 import { AnhoLectivoComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo.component';
 import { AnhoLectivoCreateComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo-create/anho_lectivo-create.component';
+import { AptitudMilitarComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar.component';
+import { AptitudMilitarCreateComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar-create/aptitud_militar-create.component';
 
 registerLocaleData(en);
 
@@ -80,7 +82,9 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     TipoEvaluacionComponent,
     TipoEvaluacionCreateComponent,
     AnhoLectivoComponent,
-    AnhoLectivoCreateComponent
+    AnhoLectivoCreateComponent,
+    AptitudMilitarComponent,
+    AptitudMilitarCreateComponent
   ],
   imports: [
     BrowserModule,
