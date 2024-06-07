@@ -11,6 +11,8 @@ import { TurnoComponent } from './admin/pages/referenciales/turno/turno.componen
 import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
 import { DocumentosComponent } from './admin/pages/referenciales/documentos/documentos.component';
 import { DocumentosCreateComponent } from './admin/pages/referenciales/documentos/documentos-create/documentos-create.component';
+import { TipoEvaluacionComponent } from './admin/pages/referenciales/tipo_evaluacion/tipo_evaluacion.component';
+import { TipoEvaluacionCreateComponent } from './admin/pages/referenciales/tipo_evaluacion/turno-create/tipo_evaluacion-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -42,6 +44,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: DocumentosComponent },
       { path: 'create', component: DocumentosCreateComponent }
+    ]
+  },
+  {
+    path: 'tipo_evaluacion',
+    children: [
+      { path: 'list', component: TipoEvaluacionComponent },
+      { path: 'create', component: TipoEvaluacionCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

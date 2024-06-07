@@ -2,5 +2,6 @@
         "ciudad" : [["descripcion","estado"],["idciudad"]],
         "curso" : [["descripcion","estado"],["idcurso"]],
         "turno" : [["descripcion","estado"],["idturno"]],
-        "documentos" : [["descripcion","estado"],["iddocumentos"]]
+        "documentos" : [["descripcion","estado"],["iddocumentos"]],
+        "tipo_evaluacion" : [["descripcion","estado"],["idtipo_evaluacion"]]
     }
