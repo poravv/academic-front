@@ -13,6 +13,8 @@ import { DocumentosComponent } from './admin/pages/referenciales/documentos/docu
 import { DocumentosCreateComponent } from './admin/pages/referenciales/documentos/documentos-create/documentos-create.component';
 import { TipoEvaluacionComponent } from './admin/pages/referenciales/tipo_evaluacion/tipo_evaluacion.component';
 import { TipoEvaluacionCreateComponent } from './admin/pages/referenciales/tipo_evaluacion/turno-create/tipo_evaluacion-create.component';
+import { AnhoLectivoComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo.component';
+import { AnhoLectivoCreateComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo-create/anho_lectivo-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -51,6 +53,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: TipoEvaluacionComponent },
       { path: 'create', component: TipoEvaluacionCreateComponent }
+    ]
+  },
+  {
+    path: 'anho_lectivo',
+    children: [
+      { path: 'list', component: AnhoLectivoComponent },
+      { path: 'create', component: AnhoLectivoCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

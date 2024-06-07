@@ -32,6 +32,8 @@ import { TurnoComponent } from './admin/pages/referenciales/turno/turno.componen
 import { TurnoCreateComponent } from './admin/pages/referenciales/turno/turno-create/turno-create.component';
 import { TipoEvaluacionComponent } from './admin/pages/referenciales/tipo_evaluacion/tipo_evaluacion.component';
 import { TipoEvaluacionCreateComponent } from './admin/pages/referenciales/tipo_evaluacion/turno-create/tipo_evaluacion-create.component';
+import { AnhoLectivoComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo.component';
+import { AnhoLectivoCreateComponent } from './admin/pages/referenciales/anho_lectivo/anho_lectivo-create/anho_lectivo-create.component';
 
 registerLocaleData(en);
 
@@ -76,7 +78,9 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     DocumentosComponent,
     DocumentosCreateComponent,
     TipoEvaluacionComponent,
-    TipoEvaluacionCreateComponent
+    TipoEvaluacionCreateComponent,
+    AnhoLectivoComponent,
+    AnhoLectivoCreateComponent
   ],
   imports: [
     BrowserModule,

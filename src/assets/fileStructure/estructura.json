@@ -3,5 +3,6 @@
         "curso" : [["descripcion","estado"],["idcurso"]],
         "turno" : [["descripcion","estado"],["idturno"]],
         "documentos" : [["descripcion","estado"],["iddocumentos"]],
-        "tipo_evaluacion" : [["descripcion","estado"],["idtipo_evaluacion"]]
+        "tipo_evaluacion" : [["descripcion","estado"],["idtipo_evaluacion"]],
+        "anho_lectivo" : [["anho","estado"],["idanho_lectivo"]]
     }

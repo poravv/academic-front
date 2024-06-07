@@ -1,5 +1,5 @@
-<app-content-header [title]="'Tipo Evaluación'" [route]="'/tipo_evaluacion/create'" [buttonTitle]="'Nuevo'" [exportExcel]="true"
-  [dataExport]="listOfDisplayData" [dataExportTitle]="'tipo_evaluacion'" [masivo]="true" [type]="'tipo_evaluacion'">
+<app-content-header [title]="'Año lectivo'" [route]="'/anho_lectivo/create'" [buttonTitle]="'Nuevo'" [exportExcel]="true"
+  [dataExport]="listOfDisplayData" [dataExportTitle]="'anho_lectivo'" [masivo]="true" [type]="'anho_lectivo'">
 </app-content-header>
 
 <div style="padding: 10px;">
@@ -15,39 +15,39 @@
       <tr>
         <!--th nzWidth="30%">COLOR1</th-->
         <th>Id</th>
-        <th>Descripcion</th>
+        <th>Año</th>
         <th>Estado</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let data of editRowTable.data">
-        <ng-container *ngIf="!editCache[data.idtipo_evaluacion].edit; else editTemplate">
-          <td>{{ data.idtipo_evaluacion }}</td>
-          <td>{{ data.descripcion }}</td>
+        <ng-container *ngIf="!editCache[data.idanho_lectivo].edit; else editTemplate">
+          <td>{{ data.idanho_lectivo }}</td>
+          <td>{{ data.anho }}</td>
           <td>{{ data.estado=="AC"?"Activo":"Inactivo" }}</td>
           <td>
-            <a style="padding: 4px;" (click)="startEdit(data.idtipo_evaluacion)">Edit</a>
+            <a style="padding: 4px;" (click)="startEdit(data.idanho_lectivo)">Edit</a>
             <a style="padding: 4px;" nz-popconfirm nzPopconfirmTitle="Seguro que desea eliminar?"
-              (nzOnConfirm)="deleteRow(data.idtipo_evaluacion)">Delete</a>
+              (nzOnConfirm)="deleteRow(data.idanho_lectivo)">Delete</a>
           </td>
         </ng-container>
         <ng-template #editTemplate>
-          <td><input type="text" nz-input disabled [(ngModel)]="editCache[data.idtipo_evaluacion].data.idtipo_evaluacion" /></td>
-          <td><input type="text" nz-input [(ngModel)]="editCache[data.idtipo_evaluacion].data.descripcion" /></td>
-          <!--td><input type="text" nz-input [(ngModel)]="editCache[data.idtipo_evaluacion].data.estado" /></td-->
+          <td><input type="text" nz-input disabled [(ngModel)]="editCache[data.idanho_lectivo].data.idanho_lectivo" /></td>
+          <td><input type="text" nz-input [(ngModel)]="editCache[data.idanho_lectivo].data.anho" /></td>
+          <!--td><input type="text" nz-input [(ngModel)]="editCache[data.idanho_lectivo].data.estado" /></td-->
 
           <td>
             <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select estado"
-              [(ngModel)]="editCache[data.idtipo_evaluacion].data.estado">
+              [(ngModel)]="editCache[data.idanho_lectivo].data.estado">
               <nz-option nzLabel="Activo" nzValue="AC"></nz-option>
               <nz-option nzLabel="Inactivo" nzValue="IN"></nz-option>
             </nz-select>
           </td>
 
           <td>
-            <a (click)="saveEdit(data.idtipo_evaluacion)" class="save">Save</a>
-            <a nz-popconfirm nzPopconfirmTitle="Sure to cancel?" (nzOnConfirm)="cancelEdit(data.idtipo_evaluacion)">Cancel</a>
+            <a (click)="saveEdit(data.idanho_lectivo)" class="save">Save</a>
+            <a nz-popconfirm nzPopconfirmTitle="Sure to cancel?" (nzOnConfirm)="cancelEdit(data.idanho_lectivo)">Cancel</a>
           </td>
         </ng-template>
       </tr>
