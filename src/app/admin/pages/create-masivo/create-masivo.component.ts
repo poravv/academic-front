@@ -13,7 +13,7 @@ export class CreateMasivoComponent implements OnInit {
   registros: any[] = []; // Arreglo para almacenar los registros del archivo CSV
   progreso = 0; // Inicializa el progreso en 0
   estructura !: any;
-  archivoJson !: any;
+  archivoJson !: any[];
   totalRegistros!:number;
   coleccion:any[]=[];
   entidad!:any;
@@ -32,16 +32,15 @@ export class CreateMasivoComponent implements OnInit {
   }
 
   verificaEntidad(type: string) {
-    
-    if (type === 'ciudad') this.estructura = myJson[type][0];
-    else if (type === 'curso') this.estructura = myJson[type][0];
-    else if (type === 'turno') this.estructura = myJson[type][0];
-    else if (type === 'documentos') this.estructura = myJson[type][0];
-    else if (type === 'tipo_evaluacion') this.estructura = myJson[type][0];
-    else if (type === 'anho_lectivo') this.estructura = myJson[type][0];
-    else if (type === 'aptitud_militar') this.estructura = myJson[type][0];
-    else if (type === 'materia') this.estructura = myJson[type][0];
-    else this.volver();
+    //console.log(type);
+    let verificacion=true;
+    for(var i =0;i<this.archivoJson.length;i++){
+      if(this.archivoJson[i].type==type){
+        verificacion=false;
+        this.estructura=this.archivoJson[i].estructura[0];
+      }
+    }
+    if(verificacion) this.volver();
   }
 
   handleFileInput(event: any) {
@@ -75,7 +74,7 @@ export class CreateMasivoComponent implements OnInit {
     for (let i = 0; i < this.entidad.length; i++) {
       // Lógica para crear el registro (simulada con espera)
       await this.simularEspera(50); // Espera de 100 ms (ajusta según tus necesidades)
-      console.log(this.type)
+      //console.log(this.type)
       this.createMasivoService.create(this.entidad[i], this.type).subscribe((response) => {
         //console.log(response);
         if (response.mensaje == 'error') {

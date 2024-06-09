@@ -19,6 +19,8 @@ import { AptitudMilitarComponent } from './admin/pages/referenciales/aptitud_mil
 import { AptitudMilitarCreateComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar-create/aptitud_militar-create.component';
 import { MateriaComponent } from './admin/pages/referenciales/materia/materia.component';
 import { MateriaCreateComponent } from './admin/pages/referenciales/materia/materia-create/materia-create.component';
+import { GradosArmaComponent } from './admin/pages/referenciales/grados_arma/grados_arma.component';
+import { GradosArmaCreateComponent } from './admin/pages/referenciales/grados_arma/grados_arma-create/grados_arma-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -78,6 +80,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: AnhoLectivoComponent },
       { path: 'create', component: AnhoLectivoCreateComponent }
+    ]
+  },
+  {
+    path: 'grados_arma',
+    children: [
+      { path: 'list', component: GradosArmaComponent },
+      { path: 'create', component: GradosArmaCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

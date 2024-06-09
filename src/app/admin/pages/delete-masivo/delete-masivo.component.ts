@@ -15,6 +15,7 @@ export class DeleteMasivoComponent implements OnInit {
   progreso = 0; // Inicializa el progreso en 0
   estructura !: any;
   totalRegistros!:number;
+  archivoJson !: any[];
   coleccion:any[]=[];
   entidad!:any;
   omitidos:number=0;
@@ -24,6 +25,7 @@ export class DeleteMasivoComponent implements OnInit {
   constructor(private route: ActivatedRoute,private deleteMasivoService:DeleteMasivoService,private messageService:MessageService) { }
 
   ngOnInit(): void {
+    this.archivoJson = myJson;
     this.route.params.subscribe(params => {
       this.type = params['type'];
       this.verificaEntidad(this.type);
@@ -32,15 +34,15 @@ export class DeleteMasivoComponent implements OnInit {
 
   verificaEntidad(type: string) {
     //console.log(type);
-    if (type === 'ciudad') this.estructura = myJson[type][1];
-    else if (type === 'curso') this.estructura = myJson[type][1];
-    else if (type === 'turno') this.estructura = myJson[type][1];
-    else if (type === 'documentos') this.estructura = myJson[type][1];
-    else if (type === 'tipo_evaluacion') this.estructura = myJson[type][1];
-    else if (type === 'anho_lectivo') this.estructura = myJson[type][1];
-    else if (type === 'aptitud_militar') this.estructura = myJson[type][1];
-    else if (type === 'materia') this.estructura = myJson[type][1];
-    else this.volver();
+    let verificacion=true;
+    for(var i =0;i<this.archivoJson.length;i++){
+      if(this.archivoJson[i].type==type){
+        verificacion=false;
+        this.estructura=this.archivoJson[i].estructura[1];
+      }
+    }
+    if(verificacion) this.volver();
+    
   }
 
   handleFileInput(event: any) {

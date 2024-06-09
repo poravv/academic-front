@@ -38,6 +38,8 @@ import { AptitudMilitarComponent } from './admin/pages/referenciales/aptitud_mil
 import { AptitudMilitarCreateComponent } from './admin/pages/referenciales/aptitud_militar/aptitud_militar-create/aptitud_militar-create.component';
 import { MateriaComponent } from './admin/pages/referenciales/materia/materia.component';
 import { MateriaCreateComponent } from './admin/pages/referenciales/materia/materia-create/materia-create.component';
+import { GradosArmaComponent } from './admin/pages/referenciales/grados_arma/grados_arma.component';
+import { GradosArmaCreateComponent } from './admin/pages/referenciales/grados_arma/grados_arma-create/grados_arma-create.component';
 
 registerLocaleData(en);
 
@@ -88,7 +90,9 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     AptitudMilitarComponent,
     AptitudMilitarCreateComponent,
     MateriaComponent,
-    MateriaCreateComponent
+    MateriaCreateComponent,
+    GradosArmaComponent,
+    GradosArmaCreateComponent
   ],
   imports: [
     BrowserModule,
