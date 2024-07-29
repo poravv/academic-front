@@ -17,7 +17,6 @@ import { AuthConfig, OAuthService, provideOAuthClient } from 'angular-oauth2-oid
 import { environment } from './environment/environments';
 import { TitleButtonComponent } from './admin/utils/title-button/title-button.component';
 import { ContentHeaderComponent } from './admin/utils/content-header/content-header.component';
-import { PersonaComponent } from './admin/pages/referenciales/persona/persona.component';
 import { homeComponent } from './admin/pages/home/home.component';
 import { CiudadCreateComponent } from './admin/pages/referenciales/ciudad/ciudad-create/ciudad-create.component';
 import { CiudadComponent } from './admin/pages/referenciales/ciudad/ciudad.component';
@@ -40,6 +39,9 @@ import { MateriaComponent } from './admin/pages/referenciales/materia/materia.co
 import { MateriaCreateComponent } from './admin/pages/referenciales/materia/materia-create/materia-create.component';
 import { GradosArmaComponent } from './admin/pages/referenciales/grados_arma/grados_arma.component';
 import { GradosArmaCreateComponent } from './admin/pages/referenciales/grados_arma/grados_arma-create/grados_arma-create.component';
+import { PersonaComponent } from './admin/pages/referenciales/persona/persona.component';
+import { PersonaCreateComponent } from './admin/pages/referenciales/persona/persona-create/persona-create.component';
+import { ImageDecodeComponent } from './admin/utils/image-decode/image-decode.component';
 
 registerLocaleData(en);
 
@@ -77,6 +79,7 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     CursoComponent,
     CursoCreateComponent,
     PersonaComponent,
+    PersonaCreateComponent,
     CreateMasivoComponent,
     DeleteMasivoComponent,
     TurnoComponent,
@@ -92,7 +95,8 @@ function initializeOAuth(oauthService: OAuthService): Promise<void> {
     MateriaComponent,
     MateriaCreateComponent,
     GradosArmaComponent,
-    GradosArmaCreateComponent
+    GradosArmaCreateComponent,
+    ImageDecodeComponent,
   ],
   imports: [
     BrowserModule,

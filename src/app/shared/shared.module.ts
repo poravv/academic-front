@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzImageModule } from 'ng-zorro-antd/image';
 
 @NgModule({
   declarations: [],
@@ -42,7 +43,8 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
     ReactiveFormsModule,
     NzSelectModule,
     NzUploadModule,
-    NzProgressModule
+    NzProgressModule,
+    NzImageModule
   ],
   exports:[
     CommonModule,
@@ -64,7 +66,8 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
     ReactiveFormsModule,
     NzSelectModule,
     NzUploadModule,
-    NzProgressModule
+    NzProgressModule,
+    NzImageModule
   ]
 })
 export class SharedModule { }

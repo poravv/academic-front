@@ -5,7 +5,7 @@
 <div style="padding: 10px;">
   <nz-input-group [nzSuffix]="suffixIconSearch">
     <input type="text" #searchText nz-input placeholder="Buscador" Green
-      (keyup.enter)="searchTotal(searchText.value)" />
+      (keyup)="searchTotal(searchText.value)" />
   </nz-input-group>
   <ng-template #suffixIconSearch>
     <i nz-icon nzType="search"></i>

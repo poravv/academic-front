@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CiudadService } from 'src/app/admin/services/ciudad/ciudad.service';
 import { MessageService } from 'src/app/admin/utils/message.service';
 
-interface ItemData {
+export interface CiudadModel {
   idciudad: string;
   descripcion: string;
   estado: string;
@@ -18,11 +18,11 @@ export class CiudadComponent implements OnInit {
 
   constructor(private ciudadService: CiudadService, private messageService: MessageService) { }
 
-  editCache: { [key: string]: { edit: boolean; data: ItemData } } = {};
-  listOfData: ItemData[] = [];
+  editCache: { [key: string]: { edit: boolean; data: CiudadModel } } = {};
+  listOfData: CiudadModel[] = [];
   searchValue = '';
   visible = false;
-  listOfDisplayData: ItemData[] = [];
+  listOfDisplayData: CiudadModel[] = [];
 
   startEdit(idciudad: string): void {
     this.editCache[idciudad].edit = true;
@@ -45,7 +45,7 @@ export class CiudadComponent implements OnInit {
 
   search(): void {
     this.visible = false;
-    this.listOfDisplayData = this.listOfData.filter((item: ItemData) => item.estado.toUpperCase().indexOf(this.searchValue.toUpperCase()) !== -1);
+    this.listOfDisplayData = this.listOfData.filter((item: CiudadModel) => item.estado.toUpperCase().indexOf(this.searchValue.toUpperCase()) !== -1);
   }
 
   searchTotal(search: string) {
@@ -109,7 +109,7 @@ export class CiudadComponent implements OnInit {
     this.ciudadService.getCiudad().subscribe({
       next: (response) => {
         if (response) {
-          response.body.map((data: ItemData) => {
+          response.body.map((data: CiudadModel) => {
             this.listOfData.push(data);
           });
           this.listOfDisplayData = [...this.listOfData];

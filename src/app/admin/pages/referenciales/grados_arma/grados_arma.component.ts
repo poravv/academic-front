@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GradosArmaService } from 'src/app/admin/services/grados_arma/grados_arma.service';
 import { MessageService } from 'src/app/admin/utils/message.service';
 
-interface ItemData {
+export interface GradosArmasModel {
   idgrados_arma: string;
   grado: string;
   armas: string;
@@ -19,11 +19,11 @@ export class GradosArmaComponent implements OnInit {
 
   constructor(private grados_armaService: GradosArmaService, private messageService: MessageService) { }
 
-  editCache: { [key: string]: { edit: boolean; data: ItemData } } = {};
-  listOfData: ItemData[] = [];
+  editCache: { [key: string]: { edit: boolean; data: GradosArmasModel } } = {};
+  listOfData: GradosArmasModel[] = [];
   searchValue = '';
   visible = false;
-  listOfDisplayData: ItemData[] = [];
+  listOfDisplayData: GradosArmasModel[] = [];
 
   startEdit(idgrados_arma: string): void {
     this.editCache[idgrados_arma].edit = true;
@@ -46,7 +46,7 @@ export class GradosArmaComponent implements OnInit {
 
   search(): void {
     this.visible = false;
-    this.listOfDisplayData = this.listOfData.filter((item: ItemData) => item.estado.toUpperCase().indexOf(this.searchValue.toUpperCase()) !== -1);
+    this.listOfDisplayData = this.listOfData.filter((item: GradosArmasModel) => item.estado.toUpperCase().indexOf(this.searchValue.toUpperCase()) !== -1);
   }
 
   searchTotal(search: string) {
@@ -111,7 +111,7 @@ export class GradosArmaComponent implements OnInit {
       next: (response) => {
         if (response) {
           //console.log(response)
-          response.body.map((data: ItemData) => {
+          response.body.map((data: GradosArmasModel) => {
             this.listOfData.push(data);
           });
           this.listOfDisplayData = [...this.listOfData];

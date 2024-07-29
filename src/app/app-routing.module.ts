@@ -21,6 +21,8 @@ import { MateriaComponent } from './admin/pages/referenciales/materia/materia.co
 import { MateriaCreateComponent } from './admin/pages/referenciales/materia/materia-create/materia-create.component';
 import { GradosArmaComponent } from './admin/pages/referenciales/grados_arma/grados_arma.component';
 import { GradosArmaCreateComponent } from './admin/pages/referenciales/grados_arma/grados_arma-create/grados_arma-create.component';
+import { PersonaComponent } from './admin/pages/referenciales/persona/persona.component';
+import { PersonaCreateComponent } from './admin/pages/referenciales/persona/persona-create/persona-create.component';
 
 const routes: Routes = [
   { path: '', component: homeComponent },
@@ -87,6 +89,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: GradosArmaComponent },
       { path: 'create', component: GradosArmaCreateComponent }
+    ]
+  },
+  {
+    path: 'persona',
+    children: [
+      { path: 'list', component: PersonaComponent },
+      { path: 'create', component: PersonaCreateComponent }
     ]
   },
   { path: '**', redirectTo: '' },

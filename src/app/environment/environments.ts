@@ -1,11 +1,11 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:5001/admin/realms/Academic',
+    apiUrl: 'https://kc.mindtechpy.net/admin/realms/Academic',
     serverUrl: 'http://localhost:4001/api',
     keycloakConfig: {
         clientId:"client-academic",
-        issuer: 'http://localhost:5001/realms/Academic',
-        tokenEndpoint: 'http://localhost:5001/realms/Academic/protocol/openid-connect/token',
+        issuer: 'https://kc.mindtechpy.net/realms/Academic',
+        tokenEndpoint: 'https://kc.mindtechpy.net/realms/Academic/protocol/openid-connect/token',
         responseType: 'code',
         scope: 'openid profile',
         showDebugInformation: true,
